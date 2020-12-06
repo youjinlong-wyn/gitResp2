@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.yjl.designpattern.factorymethod</OriginalElement>
+  <nodes>
+    <node x="-9.153846153846132" y="197.23076923076923">com.yjl.designpattern.factorymethod.HamburgerFactory</node>
+    <node x="606.0952380952381" y="89.0">com.yjl.designpattern.factorymethod.Lp</node>
+    <node x="243.0" y="178.0">com.yjl.designpattern.factorymethod.LPFactory</node>
+    <node x="388.0" y="178.0">com.yjl.designpattern.factorymethod.Business</node>
+    <node x="524.0" y="178.0">com.yjl.designpattern.factorymethod.RiceNoodlesFactory</node>
+    <node x="0.0" y="89.0">com.yjl.designpattern.factorymethod.Hamburger</node>
+    <node x="357.25" y="89.0">com.yjl.designpattern.factorymethod.FoodFactory</node>
+    <node x="284.9166666666667" y="0.0">com.yjl.designpattern.factorymethod.Food</node>
+    <node x="162.07440476190476" y="89.0">com.yjl.designpattern.factorymethod.RiceNoodles</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yjl.designpattern.factorymethod.LPFactory" target="com.yjl.designpattern.factorymethod.RiceNoodles">
+      <point x="-41.66666666666663" y="-14.5" />
+      <point x="263.83333333333337" y="138.0" />
+      <point x="233.07440476190476" y="138.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.RiceNoodlesFactory" target="com.yjl.designpattern.factorymethod.Lp">
+      <point x="0.0" y="-14.5" />
+      <point x="626.0" y="158.0" />
+      <point x="637.5952380952381" y="158.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.Lp" target="com.yjl.designpattern.factorymethod.Food">
+      <point x="0.0" y="-14.5" />
+      <point x="637.5952380952381" y="59.0" />
+      <point x="348.55952380952385" y="59.0" />
+      <point x="23.142857142857167" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.Hamburger" target="com.yjl.designpattern.factorymethod.Food">
+      <point x="0.0" y="-14.5" />
+      <point x="62.5" y="49.0" />
+      <point x="290.70238095238096" y="49.0" />
+      <point x="-34.71428571428572" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.Business" target="com.yjl.designpattern.factorymethod.FoodFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="17.75" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.HamburgerFactory" target="com.yjl.designpattern.factorymethod.Food">
+      <point x="0.0" y="-14.5" />
+      <point x="130.0" y="158.0" />
+      <point x="135.5" y="158.0" />
+      <point x="135.5" y="59.0" />
+      <point x="302.2738095238096" y="59.0" />
+      <point x="-23.14285714285711" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.HamburgerFactory" target="com.yjl.designpattern.factorymethod.FoodFactory">
+      <point x="62.0" y="-14.5" />
+      <point x="192.0" y="148.0" />
+      <point x="375.0" y="148.0" />
+      <point x="-53.25" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.FoodFactory" target="com.yjl.designpattern.factorymethod.Food">
+      <point x="0.0" y="-14.5" />
+      <point x="428.25" y="69.0" />
+      <point x="336.9880952380953" y="69.0" />
+      <point x="11.571428571428612" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.RiceNoodlesFactory" target="com.yjl.designpattern.factorymethod.FoodFactory">
+      <point x="-68.0" y="-14.5" />
+      <point x="558.0" y="158.0" />
+      <point x="481.5" y="158.0" />
+      <point x="53.25" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.RiceNoodlesFactory" target="com.yjl.designpattern.factorymethod.Food">
+      <point x="68.0" y="-14.5" />
+      <point x="694.0" y="158.0" />
+      <point x="679.5952380952381" y="158.0" />
+      <point x="679.5952380952381" y="49.0" />
+      <point x="360.1309523809524" y="49.0" />
+      <point x="34.71428571428572" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.RiceNoodles" target="com.yjl.designpattern.factorymethod.Food">
+      <point x="0.0" y="-14.5" />
+      <point x="233.07440476190476" y="69.0" />
+      <point x="313.84523809523813" y="69.0" />
+      <point x="-11.571428571428555" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.LPFactory" target="com.yjl.designpattern.factorymethod.FoodFactory">
+      <point x="41.66666666666663" y="-14.5" />
+      <point x="347.16666666666663" y="158.0" />
+      <point x="410.5" y="158.0" />
+      <point x="-17.75" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.LPFactory" target="com.yjl.designpattern.factorymethod.Food">
+      <point x="0.0" y="-14.5" />
+      <point x="305.5" y="138.0" />
+      <point x="320.82440476190476" y="138.0" />
+      <point x="320.82440476190476" y="69.0" />
+      <point x="325.4166666666667" y="69.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.yjl.designpattern.factorymethod.HamburgerFactory" target="com.yjl.designpattern.factorymethod.Hamburger">
+      <point x="-62.0" y="-14.5" />
+      <point x="68.0" y="158.0" />
+      <point x="62.5" y="158.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.3000000000000003" x="278.0" y="174.2307692307692" />
+  <SelectedNodes>
+    <node>com.yjl.designpattern.factorymethod.HamburgerFactory</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

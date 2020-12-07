@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.yjl.designpattern.simplefactory.Food</OriginalElement>
+  <nodes>
+    <node x="133.0" y="0.0">com.yjl.designpattern.simplefactory.Food</node>
+    <node x="0.0" y="102.0">com.yjl.designpattern.simplefactory.Lp</node>
+    <node x="121.0" y="102.0">com.yjl.designpattern.simplefactory.HanBurger</node>
+    <node x="0.0" y="199.0">com.yjl.designpattern.simplefactory.FoodFactory</node>
+    <node x="266.0" y="102.0">com.yjl.designpattern.simplefactory.RiceNoodles</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.yjl.designpattern.simplefactory.HanBurger" target="com.yjl.designpattern.simplefactory.Food">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.yjl.designpattern.simplefactory.Lp" target="com.yjl.designpattern.simplefactory.Food">
+      <point x="0.0" y="-26.0" />
+      <point x="50.5" y="77.0" />
+      <point x="149.83333333333334" y="77.0" />
+      <point x="-33.66666666666666" y="26.0" />
+    </edge>
+    <edge source="com.yjl.designpattern.simplefactory.RiceNoodles" target="com.yjl.designpattern.simplefactory.Food">
+      <point x="0.0" y="-26.0" />
+      <point x="337.0" y="77.0" />
+      <point x="217.16666666666663" y="77.0" />
+      <point x="33.66666666666663" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.1" x="573.5" y="314.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

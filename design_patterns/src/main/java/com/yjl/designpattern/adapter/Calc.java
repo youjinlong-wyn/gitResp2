@@ -8,6 +8,11 @@ package com.yjl.designpattern.adapter;
  **/
 public class Calc {
 
+    public int add(int a, int b) {
+        return a + b;
+
+    }
+
 }
 
 

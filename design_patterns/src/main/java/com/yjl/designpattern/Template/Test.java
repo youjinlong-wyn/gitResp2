@@ -1,7 +1,7 @@
 package com.yjl.designpattern.Template;
 
 /**
- * 描述类的职责 TODO
+ * 模板方法
  *
  * @author: jlyou
  * @date: 2020-12-06 21:14

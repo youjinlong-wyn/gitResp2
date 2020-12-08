@@ -1,5 +1,8 @@
 package com.yjl.designpattern.abstractfactory;
 
+import com.yjl.designpattern.abstractfactory.drink.Drink;
+import com.yjl.designpattern.abstractfactory.food.Food;
+
 /**
  * 描述类的职责 TODO
  *

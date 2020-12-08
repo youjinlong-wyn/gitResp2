@@ -1,6 +1,5 @@
 package com.yjl.designpattern.prototype;
 
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,12 +7,9 @@ import lombok.ToString;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -45,7 +41,7 @@ public class WeekReport implements Cloneable, Serializable {
 
             InputStream in = new ByteArrayInputStream(out.toByteArray());
             ObjectInputStream ois = new ObjectInputStream(in);
-            Object  clone= ois.readObject();
+            Object clone = ois.readObject();
             ois.close();
 
             return clone;

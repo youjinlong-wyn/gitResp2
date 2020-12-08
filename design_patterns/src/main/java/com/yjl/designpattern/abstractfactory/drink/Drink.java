@@ -1,4 +1,4 @@
-package com.yjl.designpattern.abstractfactory;
+package com.yjl.designpattern.abstractfactory.drink;
 
 /**
  * 描述类的职责 TODO

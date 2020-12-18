@@ -1,5 +1,7 @@
 package com.yjl.mybatisplus;
 
+import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yjl.mybatisplus.entity.User;
 import com.yjl.mybatisplus.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
@@ -29,13 +31,22 @@ public class MybatisPlusApplicationTests {
     @Test
     public void testInsert() {
 
-        User user = new User();
-        user.setName("jlyou");
-        user.setAge(32);
-        user.setEmail("632853406@qq.coom");
-        int effectRows = userMapper.insert(user);
-        System.out.println(effectRows);
-        System.out.println(user);
+        for (int i = 1; i <= 50; i++) {
+            User user = new User();
+            user.setName("jlyou_" + i);
+            user.setAge(i);
+            user.setEmail("632853406@qq.com_" + i);
+            userMapper.insert(user);
+
+        }
+
+        //User user = new User();
+        //user.setName("jlyou");
+        //user.setAge(32);
+        //user.setEmail("632853406@qq.coom");
+        //int effectRows = userMapper.insert(user);
+        //System.out.println(effectRows);
+        //System.out.println(user);
 
 
     }
@@ -80,6 +91,20 @@ public class MybatisPlusApplicationTests {
 
         List<User> users1 = userMapper.selectByMap(paramMap);
         users1.forEach(System.out::println);
+
+    }
+
+    @Test
+    public void testPage() {
+        Page<User> page = new Page<>(3, 20);
+        page.setSearchCount(false);
+
+
+        userMapper.selectPage(page, null);
+        page.getRecords().forEach(System.out::println);
+
+        System.out.println(JSON.toJSONString(page, true));
+
 
     }
 

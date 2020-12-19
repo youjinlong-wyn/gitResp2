@@ -39,7 +39,8 @@ public class CodeGen {
         gc.setServiceName("I%sService"); // I{User}Service,IConfigService
         gc.setIdType(IdType.AUTO);
         gc.setDateType(DateType.ONLY_DATE);
-        gc.setSwagger2(true);
+        //不需要使用swagger
+        gc.setSwagger2(false);
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
         // gc.setEntityName("%sEntity");

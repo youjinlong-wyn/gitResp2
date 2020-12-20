@@ -6,15 +6,15 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * ä¸‰ä¸ªä¸åŒçš„çº¿ç¨‹å°†ä¼šå…±ç”¨ä¸€ä¸ª Foo å®ä¾‹ã€‚
+ * Èı¸ö²»Í¬µÄÏß³Ì½«»á¹²ÓÃÒ»¸ö Foo ÊµÀı¡£
  * <p>
- * çº¿ç¨‹ A å°†ä¼šè°ƒç”¨ first() æ–¹æ³•
- * çº¿ç¨‹ B å°†ä¼šè°ƒç”¨ second() æ–¹æ³•
- * çº¿ç¨‹ C å°†ä¼šè°ƒç”¨ third() æ–¹æ³•
+ * Ïß³Ì A ½«»áµ÷ÓÃ first() ·½·¨
+ * Ïß³Ì B ½«»áµ÷ÓÃ second() ·½·¨
+ * Ïß³Ì C ½«»áµ÷ÓÃ third() ·½·¨
  * <p>
- * æ¥æºï¼šåŠ›æ‰£ï¼ˆLeetCodeï¼‰
- * é“¾æ¥ï¼šhttps://leetcode-cn.com/problems/print-in-order
- * è‘—ä½œæƒå½’é¢†æ‰£ç½‘ç»œæ‰€æœ‰ã€‚å•†ä¸šè½¬è½½è¯·è”ç³»å®˜æ–¹æˆæƒï¼Œéå•†ä¸šè½¬è½½è¯·æ³¨æ˜å‡ºå¤„ã€‚
+ * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
+ * Á´½Ó£ºhttps://leetcode-cn.com/problems/print-in-order
+ * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓĞ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
  *
  * @author: jlyou
  * @date: 2020-12-14 16:17

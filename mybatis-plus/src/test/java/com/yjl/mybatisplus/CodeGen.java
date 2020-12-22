@@ -15,34 +15,34 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import java.util.ArrayList;
 
 /**
- * ä»£ç ç”Ÿæˆå™¨
+ * ´úÂëÉú³ÉÆ÷
  *
  * @author: jlyou
  * @date: 2020-12-19 14:45
  **/
 public class CodeGen {
-    public static void main(String[] args) { // éœ€è¦æ„å»ºä¸€ä¸ª ä»£ç è‡ªåŠ¨ç”Ÿæˆå™¨ å¯¹è±¡
-        // éœ€è¦æ„å»ºä¸€ä¸ª ä»£ç è‡ªåŠ¨ç”Ÿæˆå™¨ å¯¹è±¡
+    public static void main(String[] args) { // ĞèÒª¹¹½¨Ò»¸ö ´úÂë×Ô¶¯Éú³ÉÆ÷ ¶ÔÏó
+        // ĞèÒª¹¹½¨Ò»¸ö ´úÂë×Ô¶¯Éú³ÉÆ÷ ¶ÔÏó
         AutoGenerator mpg = new AutoGenerator();
 
 
-        //------------------------------------------------1ã€å…¨å±€é…ç½® start --------------------------------------------------
-        //1ã€å…¨å±€é…ç½®
+        //------------------------------------------------1¡¢È«¾ÖÅäÖÃ start --------------------------------------------------
+        //1¡¢È«¾ÖÅäÖÃ
         GlobalConfig gc = new GlobalConfig();
         String projectPath = "D:/idea project/gitResp2/mybatis-plus";
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("jlyou");
         gc.setOpen(false);
 
-        // æ˜¯å¦è¦†ç›–ã€è¯·æ³¨æ„ï¼Œè¿™é‡Œæ˜¯trueè¦†ç›–ï¼Œè¯·å‹¿åœ¨å®é™…ä»£ç ä¸­ä½¿ç”¨ï¼Œå»ºè®®åœ¨å…¶ä»–åœ°æ–¹ç”Ÿäº§ï¼Œcopyè¿‡æ¥ã€‘
+        // ÊÇ·ñ¸²¸Ç¡¾Çë×¢Òâ£¬ÕâÀïÊÇtrue¸²¸Ç£¬ÇëÎğÔÚÊµ¼Ê´úÂëÖĞÊ¹ÓÃ£¬½¨ÒéÔÚÆäËûµØ·½Éú²ú£¬copy¹ıÀ´¡¿
         gc.setFileOverride(true);
         gc.setServiceName("I%sService"); // I{User}Service,IConfigService
         gc.setIdType(IdType.AUTO);
         gc.setDateType(DateType.ONLY_DATE);
-        //ä¸éœ€è¦ä½¿ç”¨swagger
+        //²»ĞèÒªÊ¹ÓÃswagger
         gc.setSwagger2(false);
 
-        // è‡ªå®šä¹‰æ–‡ä»¶å‘½åï¼Œæ³¨æ„ %s ä¼šè‡ªåŠ¨å¡«å……è¡¨å®ä½“å±æ€§ï¼
+        // ×Ô¶¨ÒåÎÄ¼şÃüÃû£¬×¢Òâ %s »á×Ô¶¯Ìî³ä±íÊµÌåÊôĞÔ£¡
         // gc.setEntityName("%sEntity");
         // gc.setMapperName("%sDao")
         // gc.setXmlName("%sDao")
@@ -50,17 +50,17 @@ public class CodeGen {
         // gc.setServiceImplName("%sServiceDiy")
         // gc.setControllerName("%sAction")
 
-        // å¼€å¯activeRecordæ¨¡å¼
+        // ¿ªÆôactiveRecordÄ£Ê½
         gc.setActiveRecord(true);
-        // XML ResultMap: mapper.xmlç”ŸæˆæŸ¥è¯¢æ˜ å°„ç»“æœ
+        // XML ResultMap: mapper.xmlÉú³É²éÑ¯Ó³Éä½á¹û
         gc.setBaseResultMap(true);
-        // XML ColumnList: mapper.xmlç”ŸæˆæŸ¥è¯¢ç»“æœåˆ—
+        // XML ColumnList: mapper.xmlÉú³É²éÑ¯½á¹ûÁĞ
         gc.setBaseColumnList(true);
         mpg.setGlobalConfig(gc);
-        //-----------------------------------------------1ã€å…¨å±€é…ç½® start --------------------------------------------------
+        //-----------------------------------------------1¡¢È«¾ÖÅäÖÃ start --------------------------------------------------
 
-        //-----------------------------------------------2ã€è®¾ç½®æ•°æ®æº start --------------------------------------------------
-        //2ã€è®¾ç½®æ•°æ®æº
+        //-----------------------------------------------2¡¢ÉèÖÃÊı¾İÔ´ start --------------------------------------------------
+        //2¡¢ÉèÖÃÊı¾İÔ´
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setUrl("jdbc:mysql://8.133.182.106:3306/testMyBatisPlus?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
@@ -68,64 +68,64 @@ public class CodeGen {
         dsc.setPassword("china76!");
         dsc.setDbType(DbType.MYSQL);
         mpg.setDataSource(dsc);
-        //-----------------------------------------------2ã€è®¾ç½®æ•°æ®æº end --------------------------------------------------
+        //-----------------------------------------------2¡¢ÉèÖÃÊı¾İÔ´ end --------------------------------------------------
 
 
-        //-----------------------------------------------3ã€åŒ…çš„é…ç½® start --------------------------------------------------
-        //3ã€åŒ…çš„é…ç½®
+        //-----------------------------------------------3¡¢°üµÄÅäÖÃ start --------------------------------------------------
+        //3¡¢°üµÄÅäÖÃ
         PackageConfig pc = new PackageConfig();
         pc.setModuleName("core");
         pc.setParent("com.jlyou");
 
-        //entityåŒ…çš„åç§°ï¼Œå¯ä»¥å«entity æˆ–è€… domian
-        //æ ¹æ®ä¸Šé¢çš„é…ç½® entityåŒ…çš„è·¯å¾„ä¸º com.jlyou.core.entity
+        //entity°üµÄÃû³Æ£¬¿ÉÒÔ½Ğentity »òÕß domian
+        //¸ù¾İÉÏÃæµÄÅäÖÃ entity°üµÄÂ·¾¶Îª com.jlyou.core.entity
         pc.setEntity("entity");
 
-        //æ ¹æ®ä¸Šé¢çš„é…ç½® mapperåŒ…çš„è·¯å¾„ä¸º com.jlyou.core.mapper
+        //¸ù¾İÉÏÃæµÄÅäÖÃ mapper°üµÄÂ·¾¶Îª com.jlyou.core.mapper
         pc.setMapper("mapper");
 
-        //æ ¹æ®ä¸Šé¢çš„é…ç½® service åŒ…çš„è·¯å¾„ä¸º com.jlyou.core.service
+        //¸ù¾İÉÏÃæµÄÅäÖÃ service °üµÄÂ·¾¶Îª com.jlyou.core.service
         pc.setService("service");
 
-        //æ ¹æ®ä¸Šé¢çš„é…ç½® controller åŒ…çš„è·¯å¾„ä¸º com.jlyou.core.controller
+        //¸ù¾İÉÏÃæµÄÅäÖÃ controller °üµÄÂ·¾¶Îª com.jlyou.core.controller
         pc.setController("controller");
         mpg.setPackageInfo(pc);
-        //-----------------------------------------------3ã€åŒ…çš„é…ç½® end ---------------------------------------------------
+        //-----------------------------------------------3¡¢°üµÄÅäÖÃ end ---------------------------------------------------
 
 
-        //-----------------------------------------------4ã€ç­–ç•¥é…ç½® start ---------------------------------------------------
-        //4ã€ç­–ç•¥é…ç½®
+        //-----------------------------------------------4¡¢²ßÂÔÅäÖÃ start ---------------------------------------------------
+        //4¡¢²ßÂÔÅäÖÃ
         StrategyConfig strategy = new StrategyConfig();
 
-        //è®¾ç½®è¡¨åç§°,è¿™é‡Œæ˜¯... å˜é•¿å‚æ•°ã€åŠ¨æ€å‚æ•°ï¼Œå¯ä»¥æ˜¯ä¸€ä¸ªæˆ–è€…å¤šä¸ªè¡¨åç§°
+        //ÉèÖÃ±íÃû³Æ,ÕâÀïÊÇ... ±ä³¤²ÎÊı¡¢¶¯Ì¬²ÎÊı£¬¿ÉÒÔÊÇÒ»¸ö»òÕß¶à¸ö±íÃû³Æ
         strategy.setInclude("user");
-        //é©¼å³°å‘½å
+        //ÍÕ·åÃüÃû
         strategy.setNaming(NamingStrategy.underline_to_camel);
-        //é©¼å³°å‘½å
+        //ÍÕ·åÃüÃû
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        //è‡ªåŠ¨lombok
+        //×Ô¶¯lombok
         strategy.setEntityLombokModel(true);
-        //é€»è¾‘åˆ é™¤å­—æ®µ
+        //Âß¼­É¾³ı×Ö¶Î
         strategy.setLogicDeleteFieldName("deleted");
-        //ä¹è§‚é”å­—æ®µ
+        //ÀÖ¹ÛËø×Ö¶Î
         strategy.setVersionFieldName("version");
 
-        //-----------------------------è‡ªåŠ¨å¡«å……é…ç½® start -----------------------------
+        //-----------------------------×Ô¶¯Ìî³äÅäÖÃ start -----------------------------
         TableFill createTime = new TableFill("create_time", FieldFill.INSERT);
         TableFill updateTime = new TableFill("update_timie", FieldFill.INSERT_UPDATE);
         ArrayList<TableFill> tableFills = new ArrayList<>();
         tableFills.add(createTime);
         tableFills.add(updateTime);
         strategy.setTableFillList(tableFills);
-        //-----------------------------è‡ªåŠ¨å¡«å……é…ç½® end -----------------------------
+        //-----------------------------×Ô¶¯Ìî³äÅäÖÃ end -----------------------------
 
         strategy.setRestControllerStyle(true);
         strategy.setControllerMappingHyphenStyle(true); // localhost:8080/hello_id_2
         mpg.setStrategy(strategy);
-        //-----------------------------------------------4ã€ç­–ç•¥é…ç½® end --------------------------------------------------
+        //-----------------------------------------------4¡¢²ßÂÔÅäÖÃ end --------------------------------------------------
 
 
-        mpg.execute(); //æ‰§è¡Œ
+        mpg.execute(); //Ö´ĞĞ
     }
 
 

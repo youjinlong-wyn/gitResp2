@@ -80,7 +80,7 @@ public class MybatisPlusApplicationTests {
 
     @Test
     public void testQuery() {
-        // 鎸塱d鎵归噺鏌ヨ
+        // 按id批量查询
         List<User> users = userMapper.selectBatchIds(Arrays.asList(1L, 2L, 3L));
         users.forEach(System.out::println);
 

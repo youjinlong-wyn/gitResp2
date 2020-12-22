@@ -28,13 +28,13 @@ public class MuliThread {
 
 
         Map<String, String> map = new HashMap<>();
-        map.put("寮犱笁", "寮犱笁");
-        map.put("鏉庡洓", "鏉庡洓");
-        map.put("娴嬭瘯1", "娴嬭瘯1");
-        map.put("娴嬭瘯2", "娴嬭瘯2");
-        map.put("鐜嬩簲", "鐜嬩簲");
+        map.put("张三", "张三");
+        map.put("李四", "李四");
+        map.put("测试1", "测试1");
+        map.put("测试2", "测试2");
+        map.put("王五", "王五");
 
-        System.out.println(map.get("寮犱笁"));
+        System.out.println(map.get("张三"));
 
 
     }

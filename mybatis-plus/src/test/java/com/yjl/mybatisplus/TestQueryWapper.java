@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * æè¿°ç±»çš„èŒè´£ TODO
+ * ÃèÊöÀàµÄÖ°Ôğ TODO
  *
  * @author: jlyou
  * @date: 2020-12-19 16:21
@@ -24,7 +24,7 @@ public class TestQueryWapper {
 
 
     @Test
-    void contextLoads() { // æŸ¥è¯¢nameä¸ä¸ºç©ºçš„ç”¨æˆ·ï¼Œå¹¶ä¸”é‚®ç®±ä¸ä¸ºç©ºçš„ç”¨æˆ·ï¼Œå¹´é¾„å¤§äºç­‰äº12
+    void contextLoads() { // ²éÑ¯name²»Îª¿ÕµÄÓÃ»§£¬²¢ÇÒÓÊÏä²»Îª¿ÕµÄÓÃ»§£¬ÄêÁä´óÓÚµÈÓÚ12
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         wrapper.isNotNull("name").isNotNull("email").ge("age", 12);
         userMapper.selectList(wrapper).forEach(System.out::println);
@@ -34,22 +34,22 @@ public class TestQueryWapper {
     void test2() { //
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         wrapper.eq("name", "jlyou_7");
-        User user = userMapper.selectOne(wrapper); // æŸ¥è¯¢ä¸€ä¸ªæ•°æ®ï¼Œå‡ºç°å¤šä¸ªç»“æœä½¿ç”¨List æˆ–è€… Map
+        User user = userMapper.selectOne(wrapper); // ²éÑ¯Ò»¸öÊı¾İ£¬³öÏÖ¶à¸ö½á¹ûÊ¹ÓÃList »òÕß Map
         System.out.println(user);
     }
 
     @Test
-    void test3() { // æŸ¥è¯¢å¹´é¾„åœ¨ 20 ~ 30 å²ä¹‹é—´çš„ç”¨æˆ·
+    void test3() { // ²éÑ¯ÄêÁäÔÚ 20 ~ 30 ËêÖ®¼äµÄÓÃ»§
         QueryWrapper<User> wrapper = new QueryWrapper<>();
-        wrapper.between("age", 20, 30); // åŒºé—´
-        Integer count = userMapper.selectCount(wrapper);// æŸ¥è¯¢ç»“æœæ•°
+        wrapper.between("age", 20, 30); // Çø¼ä
+        Integer count = userMapper.selectCount(wrapper);// ²éÑ¯½á¹ûÊı
         System.out.println(count);
     }
 
     @Test
-    void test4() { // æŸ¥è¯¢å¹´é¾„åœ¨ 20 ~ 30 å²ä¹‹é—´çš„ç”¨æˆ·
+    void test4() { // ²éÑ¯ÄêÁäÔÚ 20 ~ 30 ËêÖ®¼äµÄÓÃ»§
         // %e%(String), t%(String)
-        QueryWrapper<User> wrapper = new QueryWrapper<>(); // å·¦å’Œå³ t%
+        QueryWrapper<User> wrapper = new QueryWrapper<>(); // ×óºÍÓÒ t%
         wrapper.notLike("name", "e").likeRight("email", "t");
         List<Map<String, Object>> maps = userMapper.selectMaps(wrapper);
         maps.forEach(System.out::println);
@@ -58,7 +58,7 @@ public class TestQueryWapper {
     @Test
     void test5() {
         QueryWrapper<User> wrapper = new QueryWrapper<>();
-        // id åœ¨å­æŸ¥è¯¢ä¸­æŸ¥å‡ºæ¥
+        // id ÔÚ×Ó²éÑ¯ÖĞ²é³öÀ´
         wrapper.inSql("id", "select id from user where id<10");
         List<Object> objects = userMapper.selectObjs(wrapper);
         objects.forEach(System.out::println);
@@ -66,7 +66,7 @@ public class TestQueryWapper {
 
     @Test
     void test6() {
-        QueryWrapper<User> wrapper = new QueryWrapper<>(); // é€šè¿‡idè¿›è¡Œæ’åº
+        QueryWrapper<User> wrapper = new QueryWrapper<>(); // Í¨¹ıid½øĞĞÅÅĞò
         wrapper.orderByAsc("id");
         List<User> users = userMapper.selectList(wrapper);
         users.forEach(System.out::println);

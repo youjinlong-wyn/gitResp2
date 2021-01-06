@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpay.settlement.accountbackoperation.mapper.SvsAccountDayBalanceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hpay.settlement.accountbackoperation.entity.SvsAccountDayBalance">
+        <id column="ID" property="id" />
+        <result column="ACCOUNTID" property="accountid" />
+        <result column="BALANCEAMOUNT" property="balanceamount" />
+        <result column="STATUS" property="status" />
+        <result column="CURRENCYCODE" property="currencycode" />
+        <result column="CURRENCYNAME" property="currencyname" />
+        <result column="CREDITAMOUNT" property="creditamount" />
+        <result column="TYPE" property="type" />
+        <result column="BALANCEAMOUNT00" property="balanceamount00" />
+        <result column="BALANCEAMOUNT01" property="balanceamount01" />
+        <result column="BALANCEAMOUNT10" property="balanceamount10" />
+        <result column="BALANCEAMOUNT11" property="balanceamount11" />
+        <result column="PREDEDUCTBALANCE" property="predeductbalance" />
+        <result column="WORKDAY" property="workday" />
+        <result column="DAYBALANCE" property="daybalance" />
+        <result column="SETTLEDAY" property="settleday" />
+        <result column="FREEZEBALANCE" property="freezebalance" />
+        <result column="T0_DEBIT" property="t0Debit" />
+        <result column="T0_TRANS" property="t0Trans" />
+        <result column="WITHDRAW_DONE" property="withdrawDone" />
+        <result column="FROZEN" property="frozen" />
+        <result column="FROZEN_NEED" property="frozenNeed" />
+        <result column="UNFREEZE" property="unfreeze" />
+        <result column="DEDUCT_NEED" property="deductNeed" />
+        <result column="DEDUCTED" property="deducted" />
+        <result column="WITHDARW_FROZEN" property="withdarwFrozen" />
+        <result column="REFUND_NEED" property="refundNeed" />
+        <result column="REFUNDED" property="refunded" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, ACCOUNTID, BALANCEAMOUNT, STATUS, CURRENCYCODE, CURRENCYNAME, CREDITAMOUNT, TYPE, BALANCEAMOUNT00, BALANCEAMOUNT01, BALANCEAMOUNT10, BALANCEAMOUNT11, PREDEDUCTBALANCE, WORKDAY, DAYBALANCE, SETTLEDAY, FREEZEBALANCE, T0_DEBIT, T0_TRANS, WITHDRAW_DONE, FROZEN, FROZEN_NEED, UNFREEZE, DEDUCT_NEED, DEDUCTED, WITHDARW_FROZEN, REFUND_NEED, REFUNDED
+    </sql>
+
+</mapper>

@@ -1,0 +1,72 @@
+#server:
+#  port: 8888
+#  servlet:
+#    context-path: /accountBackOperation
+
+# dubbo config
+#dubbo:
+#  application:
+#    name: accountBackOperation
+#
+#  registry:
+#    id: zkAccount
+#    address: zookeeper://hpayzk1:2164?backup=hpayzk2:2165,hpayzk3:2166
+#    default: true
+#    group: dubbo-online
+#
+#  protocol:
+#    name: dubbo
+#    port: 7777
+#    serialization: formatjson
+#
+#  scan:
+#    base-packages: com.hpay.settlement.accountbackoperation.service
+#
+#
+#  consumer:
+#    timeout: 900000
+#    retries: 0
+
+#spring:
+##  datasource:
+##    driver-class-name: oracle.jdbc.driver.OracleDriver
+##    username: hpay
+##    password: handpay
+##    url: jdbc:oracle:thin:@10.148.181.247:1521/hpdb23
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: china76!
+#    url: jdbc:mysql://8.133.182.106:3306/testMyBatisPlus?useUnicode=true&characterEncoding=utf8
+#
+#    druid:
+#      aop,patterns: com.hpay.settlement.accountbackoperation.service.*
+#      filters: stat,wall,slf4j
+#
+#      stat-view-servlet:
+#        enabled: true
+#        login-username: admin
+#        login-password: admin
+#        resetEnable: false
+#
+#      web-stat-filter:
+#        enabled: true
+#        urlPattern: /*
+#        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+#      filter:
+#        stat:
+#          slow-sql-millis: 1000
+#          logSlowSql: true
+#          enabled: true
+#        wall:
+#          enabled: true
+#          config:
+#            drop-table-allow: false
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0

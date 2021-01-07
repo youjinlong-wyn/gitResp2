@@ -6,6 +6,6 @@ package com.yjl.designpattern.uml.extend_demo;
  * @author: jlyou
  * @date: 2020-12-07 14:52
  **/
-public class Son extends  Father {
+public class Son extends Father {
 
 }

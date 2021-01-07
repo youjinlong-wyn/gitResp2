@@ -6,7 +6,7 @@ package com.yjl.designpattern.strategy;
  * @author: jlyou
  * @date: 2020-12-07 23:43
  **/
-public class Sword implements  Weapon {
+public class Sword implements Weapon {
 
     public void attack() {
         System.out.println("独孤九剑........");

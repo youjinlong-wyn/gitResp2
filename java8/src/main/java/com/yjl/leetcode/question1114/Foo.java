@@ -86,14 +86,14 @@ class Foo {
         int[] array = {1, 3, 2};
 
         for (int i = 0; i < array.length; i++) {
-            if(1== array[i]){
+            if (1 == array[i]) {
                 t1.start();
             }
 
-            if(2== array[i]){
+            if (2 == array[i]) {
                 t2.start();
             }
-            if(3== array[i]){
+            if (3 == array[i]) {
                 t3.start();
             }
         }

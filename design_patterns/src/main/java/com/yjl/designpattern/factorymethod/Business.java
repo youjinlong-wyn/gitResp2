@@ -8,7 +8,7 @@ package com.yjl.designpattern.factorymethod;
  **/
 public class Business {
 
-    public static  void taste(FoodFactory ff) {
+    public static void taste(FoodFactory ff) {
 
         ff.getFood().eat();
 

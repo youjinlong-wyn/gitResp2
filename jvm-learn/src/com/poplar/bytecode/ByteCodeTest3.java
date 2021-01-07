@@ -21,7 +21,7 @@ import java.net.ServerSocket;
  * 3.当异常处理存在finally语句块时，现代化的JVM采取的处理方式是将finally语句内的字节码拼接到每个catch语句块后面。
  * 也就是说，程序中存在多少个catch，就存在多少个finally块的内容。
  */
-public class ByteCodeTest3{
+public class ByteCodeTest3 {
 
     public void test() throws IOException, FileNotFoundException {
 

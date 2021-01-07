@@ -1,0 +1,11 @@
+#spring:
+#  mvc:
+#    static-path-pattern: /res/**
+#
+#  resources:
+#    static-locations: [classpath:/haha/]
+
+spring:
+  redis:
+    host: 8.133.182.106
+    password: China76!

@@ -15,7 +15,7 @@ public class DeadLoopClass {
     }
 
     public static void main(String[] args) {
-        String string= new String();
+        String string = new String();
         new Thread(DeadLoopClass::test).start();
 
         new Thread(DeadLoopClass::test).start();

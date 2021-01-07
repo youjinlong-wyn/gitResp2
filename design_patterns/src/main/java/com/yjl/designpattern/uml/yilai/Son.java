@@ -8,7 +8,7 @@ package com.yjl.designpattern.uml.yilai;
  **/
 public class Son {
 
-    public void test(Father father){
+    public void test(Father father) {
 
     }
 

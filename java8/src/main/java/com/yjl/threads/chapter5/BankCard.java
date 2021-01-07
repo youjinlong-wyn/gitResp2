@@ -52,7 +52,7 @@ public class BankCard {
      * @author jlyou
      * @date 2020/12/21 10:35
      **/
-    public synchronized  void subMoney(BigDecimal money) {
+    public synchronized void subMoney(BigDecimal money) {
 
         // true 标识可以存钱， 不能取钱
         while (flag) {

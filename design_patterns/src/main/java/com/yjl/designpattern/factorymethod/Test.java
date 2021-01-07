@@ -9,8 +9,8 @@ package com.yjl.designpattern.factorymethod;
 public class Test {
 
     public static void main(String[] args) {
-        FoodFactory ff =  new HamburgerFactory();
-       Business.taste(ff);
+        FoodFactory ff = new HamburgerFactory();
+        Business.taste(ff);
     }
 
 }

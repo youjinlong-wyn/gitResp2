@@ -109,7 +109,7 @@ public class MybatisPlusApplicationTests {
     }
 
     @Test
-    public void testDelete(){
+    public void testDelete() {
         int i = userMapper.deleteById(1339935256376307716L);
         System.out.println(i);
         User user = userMapper.selectById(1339935256376307716L);

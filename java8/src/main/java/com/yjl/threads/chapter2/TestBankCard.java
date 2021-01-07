@@ -15,7 +15,7 @@ public class TestBankCard {
         SubMoney subMoney = new SubMoney(bankCard);
 
         Thread chenchen = new Thread(addMoney, "³¿³¿");
-        Thread bingbing = new Thread(subMoney,"±ù±ù");
+        Thread bingbing = new Thread(subMoney, "±ù±ù");
 
         chenchen.start();
         bingbing.start();

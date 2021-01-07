@@ -6,7 +6,7 @@ package com.yjl.threads.chapter4;
  * @author: jlyou
  * @date: 2020-12-21 00:27
  **/
-public class Girl extends  Thread {
+public class Girl extends Thread {
 
     @Override
     public void run() {

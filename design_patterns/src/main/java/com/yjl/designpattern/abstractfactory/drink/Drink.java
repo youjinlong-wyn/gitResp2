@@ -8,7 +8,7 @@ package com.yjl.designpattern.abstractfactory.drink;
  **/
 public interface Drink {
 
-     void drink();
+    void drink();
 
 }
 

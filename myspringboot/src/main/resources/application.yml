@@ -1,0 +1,9 @@
+person:
+  user-name: zhangsan
+  age: 20
+  birth: 1989/10/17 10:20:18
+  interests:
+    - ÀºÇò
+    - ×ãÇò
+  boss: false
+

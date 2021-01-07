@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
-@MapperScan("com.hpay.settlement.accountbackoperation.mapper")
+@MapperScan("com.hpay.settlement.accountbackoperation.db.mapper")
 public class AppRun {
 
     public static void main(String[] args) {

@@ -1,18 +1,22 @@
-package com.hpay.settlement.accountbackoperation;
+package com.hpay.codegenerator;
 
 import com.baomidou.mybatisplus.annotation.DbType;
-import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
+import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
+import com.baomidou.mybatisplus.generator.config.FileOutConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
-import com.baomidou.mybatisplus.generator.config.po.TableFill;
+import com.baomidou.mybatisplus.generator.config.TemplateConfig;
+import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 代码生成器
@@ -86,10 +90,10 @@ public class CodeGen {
 
         //entity包的名称，可以叫entity 或者 domian
         //根据上面的配置 entity包的路径为 com.hpay.settlement.accountbackoperation.entity
-        pc.setEntity("entity");
+        pc.setEntity("db.entity");
 
         //根据上面的配置 mapper包的路径为 com.hpay.settlement.accountbackoperation.mapper
-        pc.setMapper("mapper");
+        pc.setMapper("db.mapper");
 
         //根据上面的配置 service 包的路径为com.hpay.settlement.accountbackoperation.service
         pc.setService("service");
@@ -100,13 +104,50 @@ public class CodeGen {
         //-----------------------------------------------3、包的配置 end ---------------------------------------------------
 
 
+        // 自定义配置
+        InjectionConfig cfg = new InjectionConfig() {
+            @Override
+            public void initMap() {
+                // to do nothing
+            }
+        };
+
+        String templatePath = "/templates/mapper.xml.vm";
+
+        // 自定义输出配置
+        List<FileOutConfig> focList = new ArrayList<>();
+        // 自定义配置会被优先输出
+        focList.add(new FileOutConfig(templatePath) {
+            @Override
+            public String outputFile(TableInfo tableInfo) {
+                // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
+                return projectPath + "/src/main/resources/mapper/" //+ pc.getModuleName() + "/"
+                        + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+            }
+        });
+        cfg.setFileOutConfigList(focList);
+        mpg.setCfg(cfg);
+
+        // 配置模板
+        TemplateConfig templateConfig = new TemplateConfig();
+
+        // 配置自定义输出模板
+        //指定自定义模板路径，注意不要带上.ftl/.vm, 会根据使用的模板引擎自动识别
+        templateConfig.setEntity("/templates/settle_entity.java");
+        templateConfig.setService("/templates/settle_service.java");
+        templateConfig.setServiceImpl("/templates/settle_serviceImpl.java");
+        templateConfig.setController(null);
+        templateConfig.setXml(null);
+        mpg.setTemplate(templateConfig);
+
+
         //-----------------------------------------------4、策略配置 start ---------------------------------------------------
         //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
 
         //设置表名称,这里是... 变长参数、动态参数，可以是一个或者多个表名称
-		//strategy.setInclude("SVS_ACCOUNT", "SVS_ACCOUNT_BALANCE", "SVS_BALANCE_UPDATE_LOG", "SVS_ACCOUNT_DAY_BALANCE");
-		strategy.setInclude("user");
+        //strategy.setInclude("SVS_ACCOUNT", "SVS_ACCOUNT_BALANCE", "SVS_BALANCE_UPDATE_LOG", "SVS_ACCOUNT_DAY_BALANCE");
+        strategy.setInclude("user");
         //驼峰命名
         strategy.setNaming(NamingStrategy.underline_to_camel);
         //驼峰命名
@@ -132,6 +173,8 @@ public class CodeGen {
         mpg.setStrategy(strategy);
         //-----------------------------------------------4、策略配置 end --------------------------------------------------
 
+
+        mpg.setTemplateEngine(new SettleTemplateEngineWapper());
 
         mpg.execute(); //执行
     }

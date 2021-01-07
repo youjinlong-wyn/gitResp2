@@ -1,6 +1,6 @@
-package com.hpay.settlement.accountbackoperation.mapper;
+package com.hpay.settlement.accountbackoperation.db.mapper;
 
-import com.hpay.settlement.accountbackoperation.entity.User;
+import com.hpay.settlement.accountbackoperation.db.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author jlyou
- * @since 2021-01-06
+ * @since 2021-01-08
  */
 public interface UserMapper extends BaseMapper<User> {
 

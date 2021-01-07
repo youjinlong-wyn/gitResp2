@@ -1,4 +1,4 @@
-package com.hpay.settlement.accountbackoperation.entity;
+package com.hpay.settlement.accountbackoperation.db.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author jlyou
- * @since 2021-01-06
+ * @since 2021-01-08
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -23,38 +23,38 @@ public class User extends Model<User> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * ä¸»é”®ID
+     * Ö÷¼üID
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * å§“å
+     * ĞÕÃû
      */
     private String name;
 
     /**
-     * å¹´é¾„
+     * ÄêÁä
      */
     private Integer age;
 
     /**
-     * é‚®ç®±
+     * ÓÊÏä
      */
     private String email;
 
     /**
-     * ä¹è§‚é”ç‰ˆæœ¬
+     * ÀÖ¹ÛËø°æ±¾
      */
     private Integer version;
 
     /**
-     * åˆ›å»ºæ—¶é—´
+     * ´´½¨Ê±¼ä
      */
     private Date createTime;
 
     /**
-     * æ›´æ–°æ—¶é—´
+     * ¸üĞÂÊ±¼ä
      */
     private Date updateTime;
 
